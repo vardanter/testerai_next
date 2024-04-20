@@ -1,6 +1,9 @@
+@import url(/static/styles/agate.min.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -29,5 +32,26 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'signika-negative-medium';
+    src: url(/static/fonts/SignikaNegative-Medium.ttf);
+  }
+  
+  @font-face {
+    font-family: 'signika-negative-light';
+    src: url(/static/fonts/SignikaNegative-Light.ttf);
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active{
+      -webkit-text-fill-color: #ffffff;
+      transition: background-color 5000s ease-in-out 0s;
+      box-shadow: inset 0 0 20px 20px #23232329;
   }
 }
